@@ -6,8 +6,16 @@ $(function () {
      * <select data-filter data-target=".element-to-insert-into"></select>
      *
      * Events triggered:
-     * md-filter.added - data = value of item added
-     * md-filter.removed - data = value of item removed
+     * md-filter.added
+     *      data (of item added): {
+     *          tag: selectElement.getAttribute('data-tag'),
+     *          value: optionElement.value
+     *      }
+     * md-filter.removed
+     *      data (of item removed): {
+     *          tag: selectElement.getAttribute('data-tag'),
+     *          value: optionElement.value
+     *      }
      */
 
     var $target,
